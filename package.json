@@ -1,0 +1,22 @@
+{
+  "name": "phonebook",
+  "version": "1.0.0",
+  "description": "Names and Numbers for a phonebook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo ",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "ben",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fly": "^4.3.18",
+    "morgan": "^1.10.0"
+  }
+}
