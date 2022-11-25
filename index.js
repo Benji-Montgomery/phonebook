@@ -35,6 +35,7 @@ let persons =[
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static('build'))
 morgan.token('type', function (req, res) { return req.headers['content-type'] })
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :type'))
