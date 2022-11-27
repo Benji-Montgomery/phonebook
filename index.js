@@ -1,10 +1,10 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
 const express = require('express')
 const app = express()
 const cors = require('cors')
 require('dotenv').config()
 const Person = require('./models/person')
-
-// let persons = '[]'
 
 const requestLogger = (request, response, next) => {
   console.log('Method:', request.method)
@@ -71,21 +71,7 @@ app.get('/api/persons/:id', (request, response, next) => {
     })
 })
 
-// app.put('/api/persons/:id', (request, response, next) => {
-//   const name = request.name
-//   console.log('5thdown', name)
-
-//   Person.findByIdAndUpdate(request.params.id,
-//     { name }
-//   )
-//     .then(updatedPerson => {
-//       response.json(updatedPerson)
-//     })
-//     .catch(error => next(error))
-// })
-
 app.put('/api/persons/:id', (request, response, next) => {
-  console.log('yerfucked')
   const { number, important } = request.body
 
   Person.findByIdAndUpdate(request.params.id, 
@@ -96,8 +82,6 @@ app.put('/api/persons/:id', (request, response, next) => {
     })
     .catch(error => next(error))
 })
-
-
 
 const unknownEndpoint = (request, response) => {
   response.status(404).send({ error: 'unknown endpoint' })

@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo ",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "lint": "eslint ."
   },
   "author": "ben",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.28.0",
     "nodemon": "^2.0.20"
   },
   "dependencies": {
